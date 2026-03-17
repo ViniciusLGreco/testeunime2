@@ -269,30 +269,6 @@ document.getElementById('cart').classList.add('hidden');
 document.getElementById(id).classList.remove('hidden');
 }
 
-const emojis = document.querySelectorAll('.emoji');
-const canalSelect = document.getElementById("canal");
-const chipsContainer = document.getElementById("chipsContainer");
-
-let notaSelecionada = null;
-
-function renderChips(){
-chipsContainer.innerHTML = "";
-
-const canal = canalSelect.value;
-if(!canal || !notaSelecionada) return;
-
-const grupo = notaSelecionada <= 3 ? "neg" : "pos";
-const lista = chipsPorCanal[canal][grupo];
-
-lista.forEach(texto=>{
-const chip = document.createElement("div");
-chip.className = "chip";
-chip.innerText = texto;
-chip.onclick = ()=> chip.classList.toggle("active");
-chipsContainer.appendChild(chip);
-});
-}
-
 function toggleDropdown(element) {
   const dropdown = element.parentElement;
   const content = dropdown.querySelector(".dropdown-content");
@@ -312,9 +288,6 @@ function selectOption(element) {
   button.innerText = element.innerText;
   content.style.display = "none";
 }
-
-
-canalSelect.onchange = renderChips;
 
 const nps1 = document.getElementById('nps1');
 const npsValue1 = document.getElementById('npsValue1');
