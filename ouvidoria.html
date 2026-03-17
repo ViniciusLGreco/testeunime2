@@ -88,6 +88,16 @@ textarea {
     border: 1px solid #ccc;
 }
 
+.logo {
+    width: 120px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20em;
+}
+
 button {
     background-color: #00995D;
     color: #fff;
@@ -121,8 +131,11 @@ a {
 
 <div class="form-container">
 
-<h2>Avaliação da Ouvidoria</h2>
-<p>Sua resposta é muito importante para avaliarmos a atuação da Ouvidoria e aprimorarmos nossos serviços.</p>
+<div class="header">
+    <h2>Pesquisa de Satisfação - Ouvidoria</h2>
+    <img src="logo-unimed.png" alt="Unimed" class="logo">
+</div><br><br>
+
 
 <!-- Identificação -->
 <div class="question">
@@ -144,34 +157,34 @@ a {
 </div>
 
 <p><strong>1. Como você avalia a cordialidade e o tratamento recebido pelo profissional da Ouvidoria que atendeu sua demanda?</strong></p>
-<label class="question-title"><input type="radio" name="tipo_manifestacao1" value="muitobom" required> Muito Satisfeito</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao1" value="bom"> Satisfeito</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao1" value="regular"> Neutro</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao1" value="ruim"> Insatisfeito</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao1" value="muitoruim2"> Muito Insatisfeito</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao1" value="muitobom" required> Muito Bom</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao1" value="bom"> Bom</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao1" value="regular"> Regular</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao1" value="ruim"> Ruim</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao1" value="muitoruim2"> Muito Ruim</label><br>
 
 <p><strong>2. As explicações e orientações fornecidas pela Ouvidoria sobre o seu caso foram claras e fáceis de entender?</strong></p>
-<label class="question-title"><input type="radio" name="tema_manifestacao1" value="sim" required> Sim</label><br>
-<label class="question-title"><input type="radio" name="tema_manifestacao1" value="emparte" required> Parcialmente</label><br>
+<label class="question-title"><input type="radio" name="tema_manifestacao1" value="sim" required> Sim, Totalmente</label><br>
+<label class="question-title"><input type="radio" name="tema_manifestacao1" value="emparte" required> Em Parte</label><br>
 <label class="question-title"><input type="radio" name="tema_manifestacao1" value="nao"> Não</label><br>
 
 <p><strong>3. Como você avalia o tempo que a Ouvidoria levou para apresentar uma resposta final à sua solicitação?</strong></p>
-<label class="question-title"><input type="radio" name="tipo_manifestacao2" value="muitobom2" required> Muito Satisfeito</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao2" value="bom2"> Satisfeito</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao2" value="regular2"> Neutro</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao2" value="ruim2"> Insatisfeito</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao2" value="muitoruim2"> Muito Insatisfeito</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao2" value="muitobom2" required> Muito Bom</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao2" value="bom2"> Bom</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao2" value="regular2"> Regular</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao2" value="ruim2"> Ruim</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao2" value="muitoruim2"> Muito Ruim</label><br>
 
 <p><strong>4. Independente se a resposta foi favorável ou não, você considera que a Ouvidoria foi capaz de analisar e tratar o seu problema?</strong></p>
 <label class="question-title"><input type="radio" name="tema_manifestacao2" value="sim" required> Sim</label><br>
 <label class="question-title"><input type="radio" name="tema_manifestacao2" value="nao"> Não</label><br>
 
 <p><strong>5. Baseado na sua experiência com este canal, você voltaria a utilizar a Ouvidoria caso tivesse um novo problema com o plano de saúde?</strong></p>
-<label class="question-title"><input type="radio" name="tipo_manifestacao3" value="comcerteza" required> Muito Provável</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao3" value="provavelmentesim"> Provável</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao3" value="talvez"> Neutro</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao3" value="provavelmentenao"> Improvável</label><br>
-<label class="question-title"><input type="radio" name="tipo_manifestacao3" value="comcertezanao"> Muito Improvável</label> <br><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao3" value="comcerteza" required> Com Certeza</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao3" value="provavelmentesim"> Provavelmente Sim</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao3" value="talvez"> Talvez</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao3" value="provavelmentenao"> Provavelmente Não</label><br>
+<label class="question-title"><input type="radio" name="tipo_manifestacao3" value="comcertezanao"> Com Certeza Não</label> <br><br>
 
 <p><strong>Caso queira obter uma resposta sobre sua manifestação, preencha os dados abaixo:</strong></p>
 <div class="question">
