@@ -160,7 +160,15 @@ button {
     transform: scale(1.1);
 }
 
+.logo {
+    width: 120px;
+}
 
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20em;
+}
 
 .dropdown-content div:hover {
   background: #f0f0f0;
@@ -187,7 +195,10 @@ a {
 
 <div class="form-container">
 
-<h2>Pesquisa de Satisfação - Atendimento</h2><br>
+<div class="header">
+    <h2>Pesquisa de Satisfação - Atendimento</h2>
+    <img src="logo-unimed.png" alt="Unimed" class="logo">
+</div><br><br>
 
 <div class="dropdown">
     <label><strong>Canal de atendimento</strong></label>
@@ -358,6 +369,9 @@ function criarNPS(containerId, outputId) {
 
 // inicializa
 criarNPS("nps2", "npsValue2");
+
+
+
 
 </script>
 
