@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Pesquisas Unimed</title>
+
+<style>
+    * {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 42px;
+    border-radius: 10px;
+    width: 440px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    border-top: 6px solid #00995D;
+}
+
+.logo {
+    color: #00995D;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.menu-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0px ;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #00995D;
+    color: #00995D;
+    background: #ffffff;
+    transition: 0.18s;
+}
+
+.menu-btn:hover {
+    background: #00995D;
+    color: #ffffff;
+}
+
+.footer {
+    margin-top: 26px;
+    font-size: 12px;
+    color: #888;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">Unimed</div>
+<div class="subtitle">Portal de Pesquisas de Satisfação</div>
+
+<a class="menu-btn" href="atendimento.html">
+📞 Atendimento
+</a>
+
+<a class="menu-btn" href="ouvidoria.html">
+🛡️ Ouvidoria
+</a>
+
+<a class="menu-btn" href="#" onclick="alertaPrestador(event)">
+🏥 Prestador
+</a>
+
+<div class="footer">
+Selecione o tipo de avaliação desejada
+</div>
+
+</div>
+
+</body>
+
+
+<script>
+function alertaPrestador(event) {
+    event.preventDefault(); // impede o comportamento do link
+    alert("Está pesquisa ainda está em desenvolvimento.");
+}
+</script>
+</html>

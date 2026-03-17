@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Pesquisa de Satisfação – Recepção</title>
+
+
+<style>
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f5;
+    color: #2E2E2E;
+}
+
+.form-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #00995D;
+    margin-bottom: 10px;
+}
+
+.question {
+    margin-bottom: 26px;
+}
+
+.question label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.options label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.hidden { display: none; }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.period-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.protocol-box {
+    background: #f9f9f9;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 26px;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #00995D;
+}
+
+.guidance-box {
+    background: #f7f7f7;
+    border-left: 4px solid #00995D;
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #00995D;
+    color: #fff;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-btn {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fff;
+  font-weight: normal;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  margin-top: 5px;
+}
+
+.dropdown-content div {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.dropdown-content div:hover {
+  background: #f0f0f0;
+}
+
+select{width:100%;padding:8px;margin-top:6px}
+
+a {
+   background-color: #00995D;
+    color: #fff;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 400;
+}
+    a:hover { background-color: #007f4c; }
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h2>Pesquisa de Satisfação - Atendimento</h2><br>
+
+<div class="dropdown">
+    <label><strong>Canal de atendimento</strong></label>
+  <div class="dropdown-btn" onclick="toggleDropdown(this)">
+    Selecione
+  </div>
+
+  <div class="dropdown-content" class="dropdown-content">
+    <div onclick="selectOption(this)">Recepção</div>
+    <div onclick="selectOption(this)">Telefone</div>
+    <div onclick="selectOption(this)">Aplicativo</div>
+    <div onclick="selectOption(this)">WhatsApp</div>
+    <div onclick="selectOption(this)">Site</div>
+    <div onclick="selectOption(this)">Canais Internos</div>
+  </div>
+</div>
+
+<br><br><div class="question">
+<label>Identificação do beneficiário</label>
+<div class="options">
+<label><input type="radio" name="doc" onclick="toggleDoc('cpf')"> CPF</label>
+<label><input type="radio" name="doc" onclick="toggleDoc('cart')"> Carteirinha</label>
+</div>
+</div><br>
+
+<div class="question hidden" id="cpf">
+<label>CPF</label>
+<input type="text">
+</div>
+
+<div class="question hidden" id="cart">
+<label>Número da Carteirinha</label>
+<input type="text">
+</div>
+
+
+<div class="question">
+<label><strong>1. Em uma escala de 0 a 10, qual a probabilidade de você recomendar nossa operadora de saúde para um amigo ou familiar? 
+(0 = Nada provável | 10 = Extremamente provável)</strong></label>
+<div class="options">
+<label><input type="radio" name="idss_q0"> Extremamente Provável</label>
+<label><input type="radio" name="idss_q0"> Provável</label>
+<label><input type="radio" name="idss_q0"> Neutro</label>
+<label><input type="radio" name="idss_q0"> Improvável</label>
+<label><input type="radio" name="idss_q0"> Nada Provável</label>
+</div>
+</div>
+
+<div class="question">
+<label><strong>2. Como você avalia as informações fornecidas durante o atendimento foram claras, completas e transmitiram segurança?<strong></label>
+<div class="options">
+<label><input type="radio" name="idss_q1"> Muito Satisfeito</label>
+<label><input type="radio" name="idss_q1"> Satisfeito</label>
+<label><input type="radio" name="idss_q1"> Neutro</label>
+<label><input type="radio" name="idss_q1"> Insatisfeito</label>
+<label><input type="radio" name="idss_q1"> Muito Insatisfeito</label>
+</div>
+</div>
+
+<div class="question">
+<label><strong>3. Como você avalia a cortesia e o profissionalismo do(a) atendente?
+(0 = Muito insatisfeito | 10 = Muito satisfeito)</strong></label>
+<div class="options">
+<label><input type="radio" name="idss_q2"> Muito Satisfeito</label>
+<label><input type="radio" name="idss_q2"> Satisfeito</label>
+<label><input type="radio" name="idss_q2"> Neutro</label>
+<label><input type="radio" name="idss_q2"> Insatisfeito</label>
+<label><input type="radio" name="idss_q2"> Muito Insatisfeito</label>
+</div>
+</div>
+
+<div class="question">
+<label><strong>4. O tempo para início e finalização do atendimento foi adequado?</strong></label>
+<div class="options">
+<label><input type="radio" name="idss_q3"> Muito rápido</label>
+<label><input type="radio" name="idss_q3"> Demorado</label>
+<label><input type="radio" name="idss_q3"> Razoável</label>
+<label><input type="radio" name="idss_q3"> Demorado</label>
+<label><input type="radio" name="idss_q3"> Muito Demorado</label>
+</div>
+</div>
+
+<div class="dropdown">
+    <label><strong>5. Seu problema ou solicitação foi resolvido neste atendimento?</strong></label>
+  <div class="dropdown-btn" onclick="toggleDropdown(this)">
+    Selecione
+  </div>
+
+  <div class="dropdown-content" class="dropdown-content">
+    <div onclick="selectOption(this)">Sim, foi resolvido</div>
+    <div onclick="selectOption(this)">Parcialmente resolvido</div>
+    <div onclick="selectOption(this)">Não foi resolvido</div>
+  </div>
+</div>
+
+
+<br><br><div class="question">
+<label>Caso não tenha sido totalmente resolvido, conte para nós o motivo (opcional):</label>
+<textarea></textarea>
+</div>
+
+<div class="question">
+<label>6. Se desejar, deixe um comentário, sugestão ou elogio sobre o atendimento:</label>
+<textarea></textarea>
+</div>
+
+
+<button>Enviar Pesquisa</button>
+<br><br><br><br><a href="index.html">Voltar</a><br><br>
+</div>
+
+<script>
+function toggleDoc(id){
+document.getElementById('cpf').classList.add('hidden');
+document.getElementById('cart').classList.add('hidden');
+document.getElementById(id).classList.remove('hidden');
+}
+
+const emojis = document.querySelectorAll('.emoji');
+const canalSelect = document.getElementById("canal");
+const chipsContainer = document.getElementById("chipsContainer");
+const notaInput = document.getElementById('nivel_satisfacao');
+
+let notaSelecionada = null;
+
+function renderChips(){
+chipsContainer.innerHTML = "";
+
+const canal = canalSelect.value;
+if(!canal || !notaSelecionada) return;
+
+const grupo = notaSelecionada <= 3 ? "neg" : "pos";
+const lista = chipsPorCanal[canal][grupo];
+
+lista.forEach(texto=>{
+const chip = document.createElement("div");
+chip.className = "chip";
+chip.innerText = texto;
+chip.onclick = ()=> chip.classList.toggle("active");
+chipsContainer.appendChild(chip);
+});
+}
+
+function toggleDropdown(element) {
+  const dropdown = element.parentElement;
+  const content = dropdown.querySelector(".dropdown-content");
+
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
+
+function selectOption(element) {
+  const dropdown = element.closest(".dropdown");
+  const button = dropdown.querySelector(".dropdown-btn");
+  const content = dropdown.querySelector(".dropdown-content");
+
+  button.innerText = element.innerText;
+  content.style.display = "none";
+}
+
+
+canalSelect.onchange = renderChips;
+
+
+const nps=document.getElementById('nps');
+const npsValue=document.getElementById('npsValue');
+nps.oninput=()=>npsValue.innerText=nps.value;
+</script>
+
+</body>
+</html>
