@@ -199,8 +199,8 @@ a {
 <div class="question"><br>
 <label><strong>1. Em uma escala de 0 a 10, qual a probabilidade de você recomendar nossa operadora de saúde para um amigo ou familiar? 
 (0 = Nada provável | 10 = Extremamente provável)</strong></label>
-<input type="range" min="0" max="10" value="5" id="nps">
-<span id="npsValue">5</span>
+<input type="range" min="0" max="10" value="5" id="nps1">
+<span id="npsValue1">5</span>
 </div>
 
 <div class="question">
@@ -217,8 +217,8 @@ a {
 <div class="question"><br>
 <label><strong>3. Como você avalia a cortesia e o profissionalismo do(a) atendente?
 (0 = Péssimo | 10 = Muito Bom)</strong></label>
-<input type="range" min="0" max="10" value="5" id="nps">
-<span id="npsValue">5</span>
+<input type="range" min="0" max="10" value="5" id="nps1">
+<span id="npsValue1">5</span>
 </div>
     
 
@@ -272,7 +272,6 @@ document.getElementById(id).classList.remove('hidden');
 const emojis = document.querySelectorAll('.emoji');
 const canalSelect = document.getElementById("canal");
 const chipsContainer = document.getElementById("chipsContainer");
-const notaInput = document.getElementById('nivel_satisfacao');
 
 let notaSelecionada = null;
 
@@ -317,10 +316,16 @@ function selectOption(element) {
 
 canalSelect.onchange = renderChips;
 
+const nps1 = document.getElementById('nps1');
+const npsValue1 = document.getElementById('npsValue1');
 
-const nps=document.getElementById('nps');
-const npsValue=document.getElementById('npsValue');
-nps.oninput=()=>npsValue.innerText=nps.value;
+nps1.oninput = () => npsValue1.innerText = nps1.value;
+
+
+const nps2 = document.getElementById('nps2');
+const npsValue2 = document.getElementById('npsValue2');
+
+nps2.oninput = () => npsValue2.innerText = nps2.value;
 </script>
 
 </body>
