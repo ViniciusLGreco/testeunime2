@@ -137,13 +137,13 @@ button {
 
 .nps-container {
     display: flex;
-    gap: 10px;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
 .nps-btn {
-    width: 70px;
-    height: 70px;
+    width: 67px;
+    height: 67px;
     border-radius: 10px;
     font-size: 18px;
     display: flex;
@@ -233,13 +233,10 @@ a {
 <input type="text">
 </div>
 
-
 <div class="question"><br>
 <label><strong>1. Em uma escala de 0 a 10, qual a probabilidade de você recomendar nossa operadora de saúde para um amigo ou familiar? 
 (0 = Nada provável | 10 = Extremamente provável)</strong></label>
-<input type="range" min="0" max="10" value="5" id="nps1">
-<span id="npsValue1">5</span>
-</div>
+<div class="nps-container" id="nps1"></div><br><br>
 
 <div class="question">
 <label><strong>2. Como você avalia as informações fornecidas durante o atendimento foram claras, completas e transmitiram segurança?</strong></label>
@@ -368,6 +365,7 @@ function criarNPS(containerId, outputId) {
 }
 
 // inicializa
+criarNPS("nps1", "npsValue1");
 criarNPS("nps2", "npsValue2");
 
 
